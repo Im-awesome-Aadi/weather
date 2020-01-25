@@ -1,6 +1,3 @@
-console.log('JS is on client side')
-
-
 const weather = document.querySelector('form')
 const search = document.querySelector('input')
 const first = document.querySelector('#one')
