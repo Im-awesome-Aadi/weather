@@ -5,12 +5,9 @@ const forecast =(lat,lon,callback)=>{
 
 request({url: url , json:true},(error,response)=>{
     if(error)
-    {
-        callback('Unable to connect. Check your Internet Connection', undefined)
-    }
-    else if(response.body.error){
-        callback('No such location found. Try another Search',undefined)
-    }
+        callback('Not able to connect. Please Check your Internet Connection', undefined)
+    else if(response.body.error)
+        callback('No location found. Try another Search',undefined)
     else{
     callback(undefined,{
         summary :response.body.daily.data[0].summary,
